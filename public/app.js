@@ -1,5 +1,5 @@
 // Grab the articles as a json
-$.getJSON("/articles", function(data) {
+$.getJSON("/", function(data) {
   // For each one
   for (var i = 0; i < data.length; i++) {
     // Display the apropos information on the page
@@ -18,7 +18,7 @@ $(document).on("click", "p", function() {
   // Now make an ajax call for the Article
   $.ajax({
     method: "GET",
-    url: "/articles/" + thisId
+    url: "/" + thisId
   })
     // With that done, add the note information to the page
     .done(function(data) {
